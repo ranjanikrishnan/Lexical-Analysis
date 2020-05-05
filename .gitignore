@@ -1,3 +1,5 @@
 .pytest_cache
 .env
 .env.docker
+settings.json
+*.pyc
