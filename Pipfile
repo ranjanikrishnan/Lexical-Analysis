@@ -11,6 +11,7 @@ flask = "*"
 pylint = "*"
 autopep8 = "*"
 flake8 = "*"
+flask-swagger-ui = "*"
 
 [requires]
 python_version = "3.7"
