@@ -1,0 +1,82 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Lexical Complexity",
+      "description": "APIs to compute lexical complexity"
+    },
+    "host": "localhost:5000",
+    "basePath": "/",
+    "tags": [
+      {
+        "name": "LexicalDensity",
+        "description": "API for calculating lexical density"
+      }
+    ],
+    "schemes": [
+      "http"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/complexity": {
+        "post": {
+          "tags": [
+            "LexicalDensity"
+          ],
+          "description": "Computes the lexical density of a given string",
+          "parameters": [
+            {
+              "name": "input_text",
+              "in": "body",
+              "description": "Input string for which Lexical density is computed",
+              "schema": {
+                "$ref": "#/definitions/Complexity"
+              }
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "lexical complexity is returned",
+              "schema": {
+                "$ref": "#/definitions/ComplexityOutput"
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "Complexity": {
+        "required": [
+          "input_text"
+        ],
+        "properties": {
+          "input_text": {
+            "type": "string",
+            "uniqueItems": true
+          }
+        }
+      },
+      "ComplexityOutput": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "overall_ld": {
+                "type": "number",
+                "uniqueItems": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
