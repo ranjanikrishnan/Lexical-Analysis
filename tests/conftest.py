@@ -4,7 +4,7 @@ from handlers.routes import configure_routes
 
 
 @pytest.fixture(scope='module')
-def create_app():
+def client():
     app = Flask(__name__)
     configure_routes(app)
     return app.test_client()
