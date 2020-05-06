@@ -1,6 +1,4 @@
-from flask import Flask
 import json
-from handlers.routes import configure_routes
 
 
 def test_base_route(create_app):
