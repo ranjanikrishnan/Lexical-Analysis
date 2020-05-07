@@ -13,7 +13,8 @@ def configure_routes(app):
             request_data = request.get_json()
             input_text = request_data['input_text']
             mode = request.args.get('mode')
-            computed_ld = compute_ld(mode, input_text)
+            computed_ld = compute_ld(input_text, mode)
             return computed_ld
-        except Exception as e:
-            print(e)
+        except KeyError as e:
+            raise KeyError('Please enter valid input parameter', e)
+    
