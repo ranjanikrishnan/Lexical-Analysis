@@ -16,3 +16,4 @@ def test_complexity_route(client):
     data = json.loads(response.get_data(as_text=True))
     assert response.status_code == 200
     assert data['data'] == {"overall_ld": "0.71"}
+
