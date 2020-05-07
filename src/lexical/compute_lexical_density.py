@@ -2,7 +2,7 @@ from .lexical_density import get_lexical_density
 from .lexical_density_verbose import get_lexical_density_verbose
 
 
-def compute_ld(mode, input_text):
+def compute_ld(input_text, mode=''):
     output_data = {}
     if mode:
         lexical_density_verbose = get_lexical_density_verbose(input_text)
