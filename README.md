@@ -3,6 +3,16 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/ranjanikrishnan/Lexical-analysis)
 ![Python](https://img.shields.io/badge/python-v3.7-blue)
 
+## Project Description
+- A lexical analysis API which calculates the lexical density of the inputted text.
+- Lexical density ​ is defined as the number of ​ lexical words​ (or content words) divided by the
+total number of words.
+- For example, in the sentence -
+
+    "<span style="color:green">Kim loves going</span> to the <span style="color:green">cinema</span>",
+
+    the green words are lexical words and the
+    density is 67%.
 
 ## Prerequisites
 
@@ -12,7 +22,7 @@ Before you begin, ensure you have met the following requirements:
 * Docker
 * Docker-Compose 
 
-### Local
+### Local Setup
 - Clone the repo
     ```
     git clone https://github.com/ranjanikrishnan/Lexical-analysis
@@ -33,13 +43,21 @@ Before you begin, ensure you have met the following requirements:
     python src/app.py
     ```
 
-### Docker
+### Docker Setup
 
 - Run the following:
 
     ```
     docker-compose up
     ```
+
+### Project details
+Exposed APIs -
+- GET http://localhost:5000/api/docs - Swagger Documentation
+- POST http://localhost:5000/complexity - Lexical Analysis API
+    - http://localhost:5000/complexity - Returns the lexical density of the inputted text. The input text is provided via the request.
+    - http://localhost:5000/complexity?mode=verbose - Returns the lexical density of the text broken down into sentences. The input text is provided via the request.
+ 
 
 ### Tests
 
