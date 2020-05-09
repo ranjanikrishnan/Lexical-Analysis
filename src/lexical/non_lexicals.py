@@ -1,38 +1,10 @@
-non_lexical_words = [
-    'to',
-    'got',
-    'is',
-    'have',
-    'and',
-    'although',
-    'or',
-    'that',
-    'when',
-    'while',
-    'a',
-    'either',
-    'more',
-    'much',
-    'neither',
-    'my',
-    'that',
-    'the',
-    'as',
-    'no',
-    'nor',
-    'not',
-    'at',
-    'between',
-    'in',
-    'of',
-    'without',
-    'I',
-    'you',
-    'he',
-    'she',
-    'it',
-    'we',
-    'they',
-    'anybody',
-    'one'
-]
+from db.find_all import db_find_all
+from db.collections import non_lex_collection
+
+
+def get_non_lex():
+    collection = non_lex_collection()
+    results = db_find_all(collection)
+    for result in results:
+        non_lex = result['words']
+    return non_lex
