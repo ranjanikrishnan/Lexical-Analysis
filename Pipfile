@@ -14,8 +14,7 @@ flake8 = "*"
 flask-swagger-ui = "*"
 coverage = "*"
 pytest-cov = "*"
-python = "*"
-pymongo = "*"
+pymongo = {extras = ["srv"],version = "*"}
 
 [requires]
 python_version = "3.7"
