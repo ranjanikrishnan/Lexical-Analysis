@@ -8,31 +8,43 @@
 
 Before you begin, ensure you have met the following requirements:
 
+* Python (version 3.7)
 * Docker
-* Docker-Compose
-
-<!-- ## Installation 
+* Docker-Compose 
 
 ### Local
+- Clone the repo
+    ```
+    git clone https://github.com/ranjanikrishnan/Lexical-analysis
+    ```
+- Install the dependencies
+    ```
+    pip install -r requirements.txt
+    ```
+- Create .env file and update environment variables (refer .env.example)
 
-To install Lexical Analysis, follow these steps:
+- Seed the database
 
-
-```
-git clone https://github.com/ranjanikrishnan/Lexical-analysis
-```
+    ```
+    python mongo/seed_db.py 
+    ```
+- Start the app
+    ```
+    python src/app.py
+    ```
 
 ### Docker
 
+- Run the following:
 
-## Running
+    ```
+    docker-compose up
+    ```
 
-<!-- To use <project_name>, follow these steps: -->
+### Tests
 
-<!-- ```
-<usage_example>
-``` -->
+- To get the test coverage, run the following:
 
-<!-- ## Tests -->
-
-
+    ```
+    pytest --cov=src tests/
+    ```
