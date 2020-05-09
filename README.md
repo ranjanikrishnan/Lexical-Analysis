@@ -9,10 +9,9 @@
 total number of words.
 - For example, in the sentence -
 
-    "<span style="color:green">Kim loves going</span> to the <span style="color:green">cinema</span>",
+    "Kim loves going to the cinema",
 
-    the green words are lexical words and the
-    density is 67%.
+    Kim, loves, going, and cinema are lexical words and the density is 67%.
 
 ## Prerequisites
 
