@@ -1,35 +1,36 @@
-astroid==2.4.1
-attrs==19.3.0
+-i https://pypi.org/simple/
+astroid==2.5
+attrs==20.3.0
 autopep8==1.5.2
 click==7.1.2
 coverage==5.1
 dnspython==1.16.0
 entrypoints==0.3
 flake8==3.7.9
-Flask==1.1.2
 flask-swagger-ui==3.25.0
-importlib-metadata==1.6.0
+flask==1.1.2
+importlib-metadata==3.7.3 ; python_version < '3.8'
 isort==4.3.21
 itsdangerous==1.1.0
-Jinja2==2.11.2
-lazy-object-proxy==1.4.3
-MarkupSafe==1.1.1
+jinja2==2.11.3
+lazy-object-proxy==1.5.2
+markupsafe==1.1.1
 mccabe==0.6.1
-more-itertools==8.2.0
-packaging==20.3
+more-itertools==8.7.0
+packaging==20.9
 pluggy==0.13.1
-py==1.8.1
+py==1.10.0
 pycodestyle==2.5.0
 pyflakes==2.1.1
 pylint==2.5.2
-pymongo==3.10.1
+pymongo[srv]==3.10.1
 pyparsing==2.4.7
-pytest==5.4.2
 pytest-cov==2.8.1
-six==1.14.0
-toml==0.10.0
-typed-ast==1.4.1
-wcwidth==0.1.9
-Werkzeug==1.0.1
+pytest==5.4.2
+toml==0.10.2
+typed-ast==1.4.2 ; implementation_name == 'cpython' and python_version < '3.8'
+typing-extensions==3.7.4.3 ; python_version < '3.8'
+wcwidth==0.2.5
+werkzeug==1.0.1
 wrapt==1.12.1
-zipp==3.1.0
+zipp==3.4.1
